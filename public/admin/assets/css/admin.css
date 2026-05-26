@@ -1,0 +1,244 @@
+/**
+ * 灯塔DNS拦截响应平台 - 后台管理样式
+ * 深色科技风格
+ */
+
+/* 侧边栏 */
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.625rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+.sidebar-link.active {
+    background: rgba(14, 165, 233, 0.1);
+    color: #38bdf8;
+    border: 1px solid rgba(14, 165, 233, 0.2);
+}
+.sidebar-link:not(.active) {
+    color: #94a3b8;
+    border: 1px solid transparent;
+}
+.sidebar-link:not(.active):hover {
+    color: #e2e8f0;
+    background: rgba(30, 41, 59, 0.5);
+}
+
+/* 统计卡片 */
+.stat-card {
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid rgba(30, 41, 59, 0.5);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    transition: all 0.2s;
+}
+.stat-card:hover {
+    border-color: rgba(51, 65, 85, 0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 搜索输入框 */
+.search-input {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    color: #f1f5f9;
+    transition: all 0.2s;
+    outline: none;
+}
+.search-input:focus {
+    border-color: #0ea5e9;
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+}
+.search-input::placeholder {
+    color: #64748b;
+}
+
+/* 主按钮 */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #0284c7, #0ea5e9);
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.btn-primary:hover {
+    box-shadow: 0 0 15px rgba(14, 165, 233, 0.3);
+    transform: translateY(-1px);
+}
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* 次要按钮 */
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: #1e293b;
+    color: #94a3b8;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #334155;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.btn-secondary:hover {
+    background: #334155;
+    color: #e2e8f0;
+    border-color: #475569;
+}
+
+/* 表格行悬停 */
+.table-row-hover {
+    border-bottom: 1px solid rgba(30, 41, 59, 0.3);
+    transition: background-color 0.15s;
+}
+.table-row-hover:hover {
+    background: rgba(30, 41, 59, 0.2);
+}
+
+/* 模态框 */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+}
+.modal-content {
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    max-width: 32rem;
+    width: 100%;
+    margin: 1rem;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* 状态标签 */
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+.badge-success { background: rgba(16, 185, 129, 0.1); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.2); }
+.badge-warning { background: rgba(245, 158, 11, 0.1); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.2); }
+.badge-danger  { background: rgba(239, 68, 68, 0.1); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.2); }
+.badge-info    { background: rgba(14, 165, 233, 0.1); color: #38bdf8; border: 1px solid rgba(14, 165, 233, 0.2); }
+.badge-purple { background: rgba(99, 102, 241, 0.1); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.2); }
+
+/* 分页 */
+.page-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+    text-decoration: none;
+    cursor: pointer;
+}
+.page-link.active {
+    background: #0284c7;
+    color: white;
+}
+.page-link:not(.active) {
+    background: #1e293b;
+    color: #94a3b8;
+}
+.page-link:not(.active):hover {
+    background: #334155;
+    color: #e2e8f0;
+}
+
+/* Toast 通知 */
+.toast {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
+    border-left-width: 4px;
+    backdrop-filter: blur(16px);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    animation: slideInRight 0.3s ease-out;
+    transition: opacity 0.3s;
+}
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* 聊天消息滚动条 */
+.chat-messages::-webkit-scrollbar { width: 4px; }
+.chat-messages::-webkit-scrollbar-track { background: transparent; }
+.chat-messages::-webkit-scrollbar-thumb { background: #334155; border-radius: 2px; }
+.chat-messages::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+/* 操作按钮 */
+.action-btn {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+.action-btn-primary { color: #38bdf8; }
+.action-btn-primary:hover { color: #7dd3fc; background: rgba(14, 165, 233, 0.1); }
+.action-btn-success { color: #34d399; }
+.action-btn-success:hover { color: #6ee7b7; background: rgba(16, 185, 129, 0.1); }
+.action-btn-danger { color: #f87171; }
+.action-btn-danger:hover { color: #fca5a5; background: rgba(239, 68, 68, 0.1); }
+
+/* 选择框样式 */
+select.search-input {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+}
+
+/* 复选框样式 */
+input[type="checkbox"] {
+    accent-color: #0ea5e9;
+}
+
+/* 日期输入框样式 */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.6);
+    cursor: pointer;
+}

@@ -1,0 +1,11 @@
+# SEC-H05: 禁止Web直接访问storage目录
+# 防止日志文件、上传文件等被直接浏览或下载
+
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+
+<IfModule !mod_authz_core.c>
+    Order deny,allow
+    Deny from all
+</IfModule>
